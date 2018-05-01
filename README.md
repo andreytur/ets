@@ -7,7 +7,7 @@ Presto is a Drupal 8 distribution with batteries included! It sets up some sane 
 ## Installing Presto
 The recommended way to install Presto is to use our [Composer project scaffolding](https://github.com/Sitback/presto-project):
 ```bash
-composer create-project sitback/presto-project MYPROJECT --stability dev --no-interaction
+composer create-project andreytur/ets-project MYPROJECT --stability dev --no-interaction
 ```
 
 You can also [download a pre-packaged tarball off drupal.org](https://www.drupal.org/project/presto), however, due to limitations of the drupal.org packager, **installing eCommerce is not supported with this installation method**.
