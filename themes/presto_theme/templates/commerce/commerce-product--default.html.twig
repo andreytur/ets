@@ -24,9 +24,9 @@
 {% set thumbnail = product_entity.field_thumbnail %}
 
 {% set view_mode = product.title['#view_mode'] %}
-<div class="col-md-4 col-sm-6 col-xs-12 product product-item">
+<div class="product product-item">
 
-  <div class="product-listing-wrapper">
+  <div class="product-listing-wrapper card">
     {% if product.field_regular_price|render|striptags|trim != '' %}
       <a class="on-sale-tag" href="{{ product_url }}">
         <span class="onsale">Sale!</span>
@@ -51,9 +51,9 @@
         </div>
       </div>
     {% endif %}
-    <div class="product-list-info-wrapper">
+    <div class="product-list-info-wrapper card-header">
       <a href="{{ product_url }}">
-        <h4>{{ product.title|render|striptags|trim }}</h4>
+        <h4 class="card-title">{{ product.title|render|striptags|trim }}</h4>
         <h5>[ {{ product.variation_sku|render|striptags|trim }} ]</h5>
         <span class="price">
             <span class="current-price amount">{{ product.variation_price }}</span>
@@ -65,7 +65,7 @@
         </span>
       </a>
     </div>
-    <div class="variations-wrapper">
+    <div class="variations-wrapper card-body">
       {{ product.variations }}
     </div>
   </div>

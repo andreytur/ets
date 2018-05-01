@@ -8,7 +8,7 @@ export const DEST = Object.freeze({
   // Needs to be relative to the two above paths.
   maps: 'maps',
   images: path.resolve(__dirname, '..', 'images'),
-  fonts: path.resolve(__dirname, '..', 'font')
+  fonts: path.resolve(__dirname, '..', 'font'),
 });
 
 export const SRC = Object.freeze({
@@ -16,5 +16,5 @@ export const SRC = Object.freeze({
   scss: path.resolve(__dirname, '..', 'scss', '**', '*.scss'),
   images: path.resolve(__dirname, '..', 'images'),
   fonts: path.resolve(__dirname, '..', 'fonts'),
-  bootstrap: path.resolve(__dirname, '..', 'node_modules', 'bootstrap-sass', 'assets', 'stylesheets')
+  bootstrap: path.resolve(__dirname, '..', 'node_modules', 'bootstrap', 'scss'),
 });

@@ -12,6 +12,7 @@ $color3: rgba(47, 72, 88, 1);
 $color4: rgba(246, 174, 45, 1);
 $color5: rgba(242, 100, 25, 1);
 
+
 $turquoise-blue: $color1;
 $calypso: $color2;
 $pickled-bluewood: $color3;
@@ -19,36 +20,40 @@ $sea-buckthorn: $color4;
 $flamingo: $color5;
 
 $white: #fff;
-$black: #333;
-$grey: #aaa;
 $light-grey: #f2f2f2;
+$grey: #aaa;
+$boulder: #777;
+$black: #333;
 $extra-light-grey: #fafafa;
+$elephant: #0d2d38; /* dark blue */
+$grenadier: #D43900; /* Orange for link */
+$fire: #AA2E00; /* Orange for hover */
 
 /* Social Colours */
 $twitter-blue: #1DA1F2;
 $facebook-blue: #3b5998;
 $linkedin-blue: #0077b5;
-$email-blue: $calypso;
+$email-blue: $elephant;
 
 $twitter-background: $twitter-blue;
 $facebook-background: $facebook-blue;
 $linkedin-background: $linkedin-blue;
 $email-background: $email-blue;
 
-$textColor: $black;
+$textColor: $elephant;
 $textColorLowlight: $grey;
 $backgroundColor: $white;
 
 $formInputBorderColor: $flamingo;
 
 $siteButtonTextColor: $white;
-$siteButtonBorderColor: $calypso;
+$siteButtonBorderColor: $grenadier;
 $siteButtonArrowColor: $white;
-$siteButtonBackgroundColor: $calypso;
+$siteButtonBackgroundColor: $grenadier;
 $siteButtonTextColorHover: $white;
 $siteButtonArrowColorHover: $white;
-$siteButtonBorderColorHover: $pickled-bluewood;
-$siteButtonBackgroundColorHover: $pickled-bluewood;
+$siteButtonBorderColorHover: $fire;
+$siteButtonBackgroundColorHover: $fire;
 
 $tagButtonTextColor: $calypso;
 $tagButtonBorderColor: $turquoise-blue;
@@ -57,7 +62,7 @@ $tagButtonBackgroundColor: $light-grey;
 $tagButtonTextColorHover: $white;
 $tagButtonArrowColorHover: $white;
 $tagButtonBorderColorHover: $turquoise-blue;
-$tagButtonBackgroundColorHover: $calypso;
+$tagButtonBackgroundColorHover: $elephant;
 
 $categoryButtonTextColor: $white;
 $categoryButtonBorderColor: $flamingo;
@@ -76,13 +81,13 @@ $blockQuoteColor: $flamingo;
 
 $textShadowColor: $black;
 
-$linkColor: $pickled-bluewood;
-$linkColorHover: $calypso;
+$linkColor: $grenadier;
+$linkColorHover: $fire;
 
 $linkColorInverted: $white;
-$linkColorHoverInverted: $sea-buckthorn;
+$linkColorHoverInverted: $grenadier;
 
-$productItemBackground: $calypso;
+$productItemBackground: $elephant;
 $productItemBackgroundHover: $pickled-bluewood;
 $productItemLinkColor: $white;
 $productItemLinkColorHover: $turquoise-blue;
@@ -99,14 +104,14 @@ $dividerLinkColorHover: $linkColorHover;
 $mainMenuBackground: $white;
 $mainMenuTextColor: $pickled-bluewood;
 $mainMenuBorderColor: transparent;
-$mainMenuLinkColor: $pickled-bluewood;
+$mainMenuLinkColor: $black;
 $mainMenuLinkBorderColor: transparent;
 $mainMenuLinkColorHover: $calypso;
-$mainMenuLinkBorderColorHover: $turquoise-blue;
-$mainMenuLinkBorderColorActive: $sea-buckthorn;
+$mainMenuLinkBorderColorHover: $elephant;
+$mainMenuLinkBorderColorActive: $fire;
 $mainMenuBackgroundHover: $light-grey;
 
-$footerBackground: $calypso;
+$footerBackground: $elephant;
 $footerTextColor: $white;
 $footerBorderColor: transparent;
 $footerLinkColor: $linkColorInverted;
@@ -115,18 +120,18 @@ $footerLinkColorHover: $linkColorHoverInverted;
 $footerLinkBorderColorHover: $turquoise-blue;
 $footerLinkBorderColorActive: $turquoise-blue;
 
-$promobarBackgroundColor: $flamingo;
-$promobarBackgroundColorHover: $sea-buckthorn;
+$promobarBackgroundColor: $elephant;
+$promobarBackgroundColorHover: $fire;
 $promobarTextColor: $white;
 
 $promobarLinkColor: $linkColorInverted;
 $promobarLinkColorHover: $linkColorHoverInverted;
 
-$imageCaptionBackgroundColor: $pickled-bluewood;
+$imageCaptionBackgroundColor: $elephant;
 $imageCaptionColor: $white;
 
-$commerceVariantSelectedColor: $calypso;
-$commerceVariantUnselectedColor: $calypso;
+$commerceVariantSelectedColor: $elephant;
+$commerceVariantUnselectedColor: $elephant;
 $commerceVariantLoadingColor: $grey;
 
 $socialSharingBannerBackground: $extra-light-grey;

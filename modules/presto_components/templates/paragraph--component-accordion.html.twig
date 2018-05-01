@@ -38,8 +38,11 @@
  * @ingroup themeable
  */
 #}
+
 {%
   set classes = [
+    'container',
+    'mb-3',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -50,9 +53,9 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       {% if content.field_multi_item_expandable[0]['#markup'] == '0' %}
-        <div class="panel-group" id="{{paragraph_type_id}}" role="tablist" aria-multiselectable="false">
+        <div id="{{paragraph_type_id}}" role="tablist" aria-multiselectable="false">
       {% else %}
-        <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div role="tablist" aria-multiselectable="true">
       {% endif %}
           {{ content.field_accordion_panel }}
         </div>

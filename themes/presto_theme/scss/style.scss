@@ -4,13 +4,8 @@
 @import 'base/mixins';
 
 
-@import 'bootstrap-variables';
-@import 'bootstrap';
-// Add flexbox support to Bootstrap columns
-@import '../node_modules/flexboxgrid-sass/flexboxgrid';
-// @import 'scss/font-awesome';
-
-@import 'base/flexbox-grid-overrides';
+@import 'base/bootstrap_variables';
+@import 'base/bootstrap_import';
 
 @import 'base/fonts';
 
@@ -18,18 +13,18 @@
 @import 'structure/flex';
 @import 'structure/overrides';
 
-@import 'modules/page';
-@import 'modules/navbar';
+@import 'modules/blockquote';
 @import 'modules/breadcrumb';
-@import 'modules/textbox';
-@import 'modules/images';
 @import 'modules/buttons';
+@import 'modules/cards';
 @import 'modules/dividers';
+@import 'modules/images';
+@import 'modules/links';
+@import 'modules/lists';
+@import 'modules/navbar';
+@import 'modules/page';
 @import 'modules/promo-bar';
 @import 'modules/slideshow';
-@import 'modules/lists';
-@import 'modules/links';
-@import 'modules/blockquote';
 
 @import 'modules/article';
 

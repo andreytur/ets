@@ -9,17 +9,16 @@ module.exports = {
       host: 'presto.docker',
       open: false,
       socket: {
-        domain: 'localhost:3000'
+        domain: 'localhost:3000',
       },
       snippetOptions: {
         rule: {
           match: /<\/body>/i,
-          fn: (snippet) => snippet
-        }
-      }
+          fn: snippet => snippet,
+        },
+      },
     });
-
     gulp.watch(paths.SRC.scss, ['scss']);
     gulp.watch(paths.SRC.js, ['js']);
-  }
+  },
 };

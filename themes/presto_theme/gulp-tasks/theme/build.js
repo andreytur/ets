@@ -1,3 +1,3 @@
 module.exports = {
-  deps: ['scss', 'js']
+  deps: ['scss', 'js'],
 };

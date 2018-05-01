@@ -54,28 +54,29 @@
 %}
 
 {% if label_hidden %}
-  {% if multiple %}
-    <div{{ attributes.addClass(classes, 'field--items row center-sm') }}>
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field--item col-xs-12 col-sm-3') }}>{{ item.content }}</div>
-      {% endfor %}
-    </div>
-  {% else %}
-    {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field--item col-xs-12 col-sm-3') }}>{{ item.content }}</div>
-    {% endfor %}
-  {% endif %}
-{% else %}
-  <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  <div class="container">
     {% if multiple %}
-      <div class="field__items row center-sm">
-    {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes.addClass('field--item col-xs-12 col-sm-3') }}>{{ item.content }}</div>
-    {% endfor %}
-    {% if multiple %}
+      <div{{ attributes.addClass(classes, 'field--items card-deck row justify-content-center no-gutters') }}>
+        {% for item in items %}
+          {{ item.content }}
+        {% endfor %}
       </div>
+    {% else %}
+      {% for item in items %}
+        {{ item.content }}
+      {% endfor %}
     {% endif %}
-  </div>
+  {% else %}
+    <div{{ attributes.addClass(classes) }}>
+      <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+      {% if multiple %}
+        <div class="field__items row justify-content-center">
+      {% endif %}
+      {% for item in items %}
+          {{ item.content }}
+      {% endfor %}
+      {% if multiple %}
+        </div>
+      {% endif %}
+    </div>
 {% endif %}

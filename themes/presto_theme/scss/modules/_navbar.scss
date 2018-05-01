@@ -5,56 +5,56 @@
   background: $mainMenuBackground;
   border-bottom: 2px solid $mainMenuBorderColor;
 
-  &.navbar-default {
+  &.navbar-light {
+    .navbar-brand {
+      display: flex;
+      align-content: flex-start;
 
-    .navbar-header {
-      margin: 0;
-      // width: 100%;
-      display: block;
-
-      @media screen and (min-width: $screen-sm-min) {
-        display: flex;
-      }
-
-      // .region-header {
-      //   @extend .clearfix;
-      // }
-
-      .logo {
+      .site-logo {
         img {
+          display: block;
           width: auto;
-          height: $navbar-height; // - ($padding-base-vertical * 2);
-          padding: $padding-base-vertical $padding-base-horizontal;
+          height: 1.325rem;
+          padding: 2px 15px;
+          box-sizing: content-box;
         }
       }
     }
 
-    .navbar-nav {
-      > li {
-        > a {
-          color: $mainMenuLinkColor;
-          border-bottom: 2px solid $mainMenuLinkBorderColor;
-          margin-bottom: -2px;
-          padding-left: 2.5em;
-          padding-right: 2.5em;
-          box-sizing: content-box;
-          text-align: center;
+    .site-name-slogan {
+      display: block;
+      color: $boulder;
+      padding: 10px;
+    }
+  }
 
-          @media screen and (min-width: $screen-sm-min) {
-            text-align: left;
-          }
+  .navbar-nav {
+    > .nav-item {
+      &.active {
+        > a.nav-link {
+          color: $mainMenuLinkColorHover;
+          border-bottom-color: $mainMenuLinkBorderColorActive;
+        }
+      }
 
+      > a.nav-link {
+        color: $mainMenuLinkColor;
+        border-bottom: 2px solid $mainMenuLinkBorderColor;
+        margin-bottom: -2px;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+        box-sizing: content-box;
+        text-align: center;
+        font-size: 14px;
 
-          &.is-active {
-            color: $mainMenuLinkColorHover;
-            border-bottom-color: $mainMenuLinkBorderColorActive;
-          }
+        @include media-breakpoint-up(md) {
+          text-align: left;
+        }
 
-          &:hover {
-            color: $mainMenuLinkColorHover;
-            border-bottom-color: $mainMenuLinkBorderColorHover;
-            background: $mainMenuBackgroundHover;
-          }
+        &:hover {
+          color: $mainMenuLinkColorHover;
+          border-bottom-color: $mainMenuLinkBorderColorHover;
+          background: $mainMenuBackgroundHover;
         }
       }
     }
@@ -62,7 +62,7 @@
 }
 
 .navbar-right {
-  @media screen and (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(md) {
     margin-right: 0;
   }
 }
@@ -73,27 +73,23 @@
   .container-fluid & {
     margin: 0;
 
-    @media screen and (min-width: $screen-sm-min) {
+    @include media-breakpoint-up(md) {
       margin-right: -15px;
       margin-left: -15px;
     }
   }
+}
 
-  &.collapse:not(.in),
-  &.collapsing {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    transition: ease .35s height, visibility;
-  }
+.navbar-text {
+  font-size: 14px;
 }
 
 .region-navigation,
 .region-navigation-collapsible {
-
-  @media screen and (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(md) {
     display: flex;
     justify-content: flex-end;
+    width: 100%;
   }
 }
 

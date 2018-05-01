@@ -1,22 +1,27 @@
-import collapse from 'bootstrap-sass/assets/javascripts/bootstrap/collapse.js';
-import transition from 'bootstrap-sass/assets/javascripts/bootstrap/transition.js';
 
-(function ($, window, document) {
+const $ = require('jquery');
 
-  let addDependency = (dep) => dep;
+window.jquery = $;
+window.jQuery = $;
+window.$ = $;
 
-  // Add dependencies here to include them in the compiled output.
-  addDependency(collapse);
-  addDependency(transition);
+// popper is a pre-requisite for bootstrap 4 dropdowns.
+const popper = require('popper.js');
 
-  let f = {
+window.Popper = popper;
+
+require('bootstrap');
+require('lity');
+
+((window, document) => {
+  const f = {
     addToCartInList: (el) => {
-      let $el = $(el.delegateTarget);
-      let $form = $el.parents('li.product-item').find('form').get(0);
+      const $el = $(el.delegateTarget);
+      const $form = $el.parents('li.product-item').find('form').get(0);
       if ($form) {
         $form.submit();
       }
-    }
+    },
   };
 
   $(document).ready(() => {
@@ -24,5 +29,4 @@ import transition from 'bootstrap-sass/assets/javascripts/bootstrap/transition.j
       f.addToCartInList(el);
     });
   });
-
-}(jQuery, window, document));
+})(window, document);

@@ -63,23 +63,17 @@ set classes = [
   {% endblock paragraph %}
 
 {% else %}
-  <div {{ attributes.addClass(classes) }}>
-    <div class="thumbnail {{ iconBoxType }} ">
-      <div class="text-center">
-        {% if (iconBoxType == 'Image') %}
-          <div class="row center-sm">
-            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
-              {{ content.field_media }}
-            </div>
-          </div>
-        {% elseif(iconBoxType == 'Icon') %}
-          <i class="fa fa-5x fa-{{ content.field_icon['#items'].getString() }}"></i>
-        {% endif %}
-
-        <div class="caption">
-         {{ content.field_body }}
-        </div>
+  <div {{ attributes.addClass(classes, "card col-md-3 text-center") }}>
+    {% if (iconBoxType == 'Image') %}
+      <img src="{{ image_uri }}" alt="" class="card-img-top img-fluid">
+    {% elseif(iconBoxType == 'Icon') %}
+      <div class="card-img-top">
+        <i class="pt-5 fa fa-5x fa-{{ content.field_icon['#items'].getString() }}"></i>
       </div>
+    {% endif %}
+
+    <div class="card-body">
+     {{ content.field_body }}
     </div>
   </div>
 
